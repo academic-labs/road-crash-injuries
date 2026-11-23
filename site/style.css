@@ -321,3 +321,9 @@ html { scroll-padding-top: calc(var(--header-h) + 5rem); }
 @media (max-width: 800px) {
   .travel-bar { position: static; }
 }
+
+/* ---------- Header link hover (same orange as the travel bar) ---------- */
+.site-nav { gap: 0.25rem; }
+.site-nav a { padding: 0 1rem; transition: background-color var(--move), color var(--move); }
+.site-nav a:hover,
+.site-nav a:focus-visible { background: var(--bar); color: var(--ink); border-bottom-color: var(--ink); }
