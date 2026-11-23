@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the data | Road crash injuries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Story">
+      <a href="index.html">Intro</a>
+      <a href="chapter-1.html">1</a>
+      <a href="chapter-2.html">2</a>
+      <a href="chapter-3.html">3</a>
+      <a href="chapter-4.html">4</a>
+      <a href="about-data.html" aria-current="page">About the data</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <h1 class="chapter-title">About the data</h1>
+    <div class="prose">
+      <h2>Where the numbers come from</h2>
+      <p>The cases come from the Bureau of Infrastructure and Transport Research Economics (BITRE) <a href="https://www.bitre.gov.au/publications/ongoing/hospitalised-injury">hospitalised injury data</a>. It covers 2011 to 2021 and is based on hospital records collected by the Australian Institute of Health and Welfare (AIHW). We use the national table and keep only cases caused by traffic accidents.</p>
+
+      <h2>What a "hospital case" is</h2>
+      <p>Each number is a count of hospital cases, not a count of different people. Counts are not rates. Places and groups with more people will have more cases.</p>
+
+      <h2>What to keep in mind</h2>
+      <ul>
+        <li><strong>Rates:</strong> the "cases per 100,000 people" in chapter 1 divides the cases in each year by Australia's population in June of that year, from the Australian Bureau of Statistics. It is a simple rate and does not adjust for age.</li>
+        <li><strong>Groups:</strong> to keep charts readable we combined some small groups. The 12 road user types become 6, and the 10 things people hit become 5.</li>
+        <li><strong>Non-collision:</strong> this group is the data's own category, "non-collision transport accident". See the BITRE data dictionary for its exact meaning.</li>
+        <li><strong>Changes in recording:</strong> hospitals and states can change how they record data over time. This can cause breaks in a series. The BITRE data dictionary lists them.</li>
+        <li><strong>Small numbers:</strong> the source data is already grouped to protect privacy, so we cannot see single people.</li>
+      </ul>
+
+      <h2>How we prepared it</h2>
+      <p>We used KNIME to read the raw sheet of each file, keep traffic cases, turn counts into numbers, group the categories and export one CSV for each chart. You can view each chart as a table and download its CSV from the chart.</p>
+
+      <h2>Privacy and rules</h2>
+      <p>AIHW collections are approved by an ethics committee and checked for privacy. Results are grouped and small numbers are hidden before release. Read the <a href="https://www.aihw.gov.au/about-our-data/data-governance">AIHW data governance page</a> and the <a href="https://www.infrastructure.gov.au/disclaimers">department disclaimer</a>. The department does not guarantee the accuracy of the information.</p>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Chapters">
+      <a class="prev" href="chapter-4.html">Previous</a>
+      <a class="next" href="index.html">Back to the start</a>
+    </nav>
+  </main>
+</body>
+</html>

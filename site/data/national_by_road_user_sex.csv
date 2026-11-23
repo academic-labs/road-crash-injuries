@@ -1,0 +1,32 @@
+"sex","road_user","hospitalisations","bed_days","road_user_total","sex_share_within_road_user_pct"
+"Female","Bus occupant",1618,7790,2584,62.61609907120743
+"Female","Car driver",64966,253207,135063,48.10051605547041
+"Female","Car passenger",31864,148639,53241,59.84861291110235
+"Female","Car unknown position",4251,26147,8836,48.11000452693526
+"Female","Heavy transport driver",124,734,4614,2.6874729085392284
+"Female","Heavy transport passenger",164,900,553,29.65641952983725
+"Female","Heavy transport unknown position",44,123,444,9.90990990990991
+"Female","Motorcyclist",9629,49713,92322,10.42980004765928
+"Female","Other or unknown",2251,14853,6346,35.47116293728333
+"Female","Pedal cyclist",16218,43075,75362,21.520129508240228
+"Female","Pedestrian",12382,115412,28532,43.396887705032945
+"Female","Pick-up truck or van occupant",595,2752,2987,19.91965182457315
+"Male","Bus occupant",965,5270,2584,37.34520123839009
+"Male","Car driver",70092,362484,135063,51.895781968414745
+"Male","Car passenger",21376,107347,53241,40.14950883717436
+"Male","Car unknown position",4584,30923,8836,51.878678134902664
+"Male","Heavy transport driver",4490,26322,4614,97.31252709146078
+"Male","Heavy transport passenger",389,2254,553,70.34358047016275
+"Male","Heavy transport unknown position",400,2873,444,90.09009009009009
+"Male","Motorcyclist",82691,454385,92322,89.56803362145534
+"Male","Other or unknown",4095,22757,6346,64.52883706271668
+"Male","Pedal cyclist",59140,179422,75362,78.47456277699636
+"Male","Pedestrian",16149,146766,28532,56.599607458292446
+"Male","Pick-up truck or van occupant",2392,14703,2987,80.08034817542685
+"Other or unknown","Bus occupant",1,1,2584,0.03869969040247678
+"Other or unknown","Car driver",5,26,135063,0.0037019761148501073
+"Other or unknown","Car passenger",1,1,53241,0.0018782517232959562
+"Other or unknown","Car unknown position",1,2,8836,0.011317338162064282
+"Other or unknown","Motorcyclist",2,4,92322,0.0021663308853794327
+"Other or unknown","Pedal cyclist",4,4,75362,0.005307714763408614
+"Other or unknown","Pedestrian",1,2,28532,0.003504836674610963

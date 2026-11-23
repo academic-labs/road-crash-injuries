@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: The hidden toll | Road crash injuries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Story">
+      <a href="index.html">Intro</a>
+      <a href="chapter-1.html" aria-current="page">1</a>
+      <a href="chapter-2.html">2</a>
+      <a href="chapter-3.html">3</a>
+      <a href="chapter-4.html">4</a>
+      <a href="about-data.html">About the data</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <h1 class="chapter-title">Chapter 1: The hidden toll</h1>
+    <p class="chapter-takeaway">Between 2011 and 2021, hospital cases from road crashes rose by 16%. The population grew by about the same amount, so the rate per 100,000 people stayed close to 150.</p>
+
+    <section class="chart-card chart-card--main" aria-labelledby="main-title">
+      <h2 id="main-title" class="chart-title">Hospital cases from road crashes each year</h2>
+      <details class="chart-how">
+        <summary>How to read this chart</summary>
+        <p>Each dot is one year. The higher the dot, the more people went to hospital after a road crash that year. The line starts at zero so the size of the change is not exaggerated.</p>
+      </details>
+      <div class="chart-tools">
+        <button class="tool-button" type="button" aria-expanded="false" data-table-toggle="flow-table">View as table</button>
+        <a class="tool-button" href="data/national_by_year_derived.csv" download>Download CSV</a>
+      </div>
+      <div id="main-chart" class="chart"></div>
+      <div id="flow-table" class="chart-table" hidden></div>
+    </section>
+
+    <div class="chart-row">
+      <section class="chart-card" aria-labelledby="rate-title">
+        <h2 id="rate-title" class="chart-title">Cases for every 100,000 people</h2>
+        <p class="chart-note">A rate shows how likely injury is, because it takes population growth into account. The axis starts at zero.</p>
+        <div id="rate-chart" class="chart"></div>
+      </section>
+      <section class="chart-card" aria-labelledby="change-title">
+        <h2 id="change-title" class="chart-title">Change from the year before</h2>
+        <p class="chart-note">Blue bars are rises and orange bars are falls.</p>
+        <div id="change-chart" class="chart"></div>
+      </section>
+    </div>
+
+    <section class="takeaway">
+      <h2>What to take away</h2>
+      <ul>
+        <li>More people are hurt each year than a decade ago, but there are also more people in Australia.</li>
+        <li>Cases dipped in 2020, then rose again in 2021.</li>
+        <li>Counts do not tell us who is hurt. That is the next chapter.</li>
+      </ul>
+    </section>
+
+    <nav class="chapter-nav" aria-label="Chapters">
+      <a class="prev" href="index.html">Previous</a>
+      <a class="next" href="chapter-2.html">Next</a>
+    </nav>
+  </main>
+
+  <script type="module" src="chapter1.js"></script>
+</body>
+</html>

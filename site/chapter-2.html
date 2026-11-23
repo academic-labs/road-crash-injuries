@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 2: Who is getting hurt? | Road crash injuries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Story">
+      <a href="index.html">Intro</a>
+      <a href="chapter-1.html">1</a>
+      <a href="chapter-2.html" aria-current="page">2</a>
+      <a href="chapter-3.html">3</a>
+      <a href="chapter-4.html">4</a>
+      <a href="about-data.html">About the data</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <h1 class="chapter-title">Chapter 2: Who is getting hurt?</h1>
+    <p class="chapter-takeaway">Since 2011, hospital cases among cyclists rose by about 51%, while cases among pedestrians fell by about 15%.</p>
+
+    <div class="travel-bar" role="group" aria-labelledby="travel-label">
+      <span id="travel-label" class="travel-label">How do you travel?</span>
+      <span id="travel-options" style="display: contents"></span>
+      <span id="travel-showing" class="travel-showing" aria-live="polite">Showing: Everyone</span>
+      <button id="travel-reset" class="travel-reset" type="button">Reset</button>
+    </div>
+
+    <section class="chart-card chart-card--main" aria-labelledby="main-title">
+      <h2 id="main-title" class="chart-title">How each group changed since 2011 (2011 = 100)</h2>
+      <details class="chart-how">
+        <summary>How to read this chart</summary>
+        <p>Each line is a group of road users. In "Change since 2011" every line starts at 100. A line at 150 means 50% more cases than in 2011. This lets us compare small and large groups. Switch to "Cases each year" to see real numbers.</p>
+      </details>
+      <div class="chart-tools">
+        <button class="tool-button" type="button" data-mode="index" aria-pressed="true">Change since 2011</button>
+        <button class="tool-button" type="button" data-mode="counts" aria-pressed="false">Cases each year</button>
+        <button class="tool-button" type="button" aria-expanded="false" data-table-toggle="flow-table">View as table</button>
+        <a class="tool-button" href="data/national_by_year_road_user.csv" download>Download CSV</a>
+      </div>
+      <div id="main-chart" class="chart"></div>
+      <div id="flow-table" class="chart-table" hidden></div>
+      <p class="chart-note">These are counts of hospital cases, not rates. Groups differ in size, so use the change since 2011 to compare them.</p>
+    </section>
+
+    <div class="chart-row">
+      <section class="chart-card" aria-labelledby="age-title">
+        <h2 id="age-title" class="chart-title">Ages of everyone, by year</h2>
+        <p class="chart-note">Darker boxes mean a bigger share of the group's cases that year.</p>
+        <div id="age-chart" class="chart"></div>
+      </section>
+      <section class="chart-card" aria-labelledby="sex-title">
+        <h2 id="sex-title" class="chart-title">Women and men: everyone, 2011 to 2021</h2>
+        <div id="sex-chart" class="chart"></div>
+        <p class="chart-note">A very small number of cases have no sex recorded.</p>
+      </section>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Chapters">
+      <a class="prev" href="chapter-1.html">Previous</a>
+      <a class="next" href="chapter-3.html">Next</a>
+    </nav>
+  </main>
+
+  <script type="module" src="chapter2.js"></script>
+</body>
+</html>
