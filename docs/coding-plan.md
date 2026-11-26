@@ -185,27 +185,27 @@ All files in `assets/data/processed/`, produced by KNIME. Columns/types read fro
 
 | File | Used by | Rows/grain | Columns (type) |
 |---|---|---|---|
-| national_by_year_derived.csv | C1,C2,C3(All),stats | 11/year | calendar_year,hospitalisations,bed_days,prev_year_hosp,yoy_change_hosp,yoy_change_pct_hosp,prev_year_bed_days,yoy_change_bed_days,yoy_change_pct_bed_days,baseline_2011,index_2011,bed_days_per_case,population,rate_per_100k |
-| national_by_year_road_user_group.csv | C3,stats | 55/year×group(5) | road_user_group,hospitalisations,bed_days,calendar_year,annual_total,road_user_group_share_pct,road_user_group_baseline_2011,index_2011 |
-| national_by_year_age.csv | C4(Everyone),stats | 78/year×age(7)+1 Unknown | calendar_year,age_group,age_order,hospitalisations,bed_days,annual_total,age_share_pct |
-| national_by_age_road_user_group_year.csv | C4(named) | 386/year×age×group+1 Unknown | calendar_year,age_group,road_user_group,hospitalisations,bed_days,road_user_year_total,share_within_road_user_group_pct |
-| national_monthly_2020_baseline.csv | C5,stats | 72/group(6 incl All)×month | month_name,month_num,road_user_group,baseline_mean,baseline_min,baseline_max,value_2019,value_2020,change_2020_vs_2019_pct |
-| national_by_road_user_counterparty_year.csv | C6,C7,stats | 308/year×group×counterparty (zeros absent) | calendar_year,road_user_group,counterparty_group,hospitalisations,bed_days,road_user_year_total,share_within_road_user_group_pct |
-| national_car_occupants_counterparty_remoteness.csv | C8,stats | 264/year×remoteness(4)×counterparty(6) | calendar_year,remoteness,counterparty_group,hospitalisations,bed_days,remoteness_total,share_within_remoteness_pct |
-| state_by_year_rates.csv | C9,C10,stats | 88/state(8)×year(11) | state_code,state_name,calendar_year,cases(→hospitalisations),bed_days,population,series_break_flag,is_break_year,series_break_note,rate_per_100k |
-| external_deaths_2021.csv | stats | 4 | year,road_user_group,deaths,source,note |
+| `national_by_year_derived.csv` | C1,C2,C3(All),stats | 11/year | `calendar_year`, `hospitalisations`, `bed_days`, `prev_year_hosp`<br>`yoy_change_hosp`, `yoy_change_pct_hosp`, `prev_year_bed_days`, `yoy_change_bed_days`<br>`yoy_change_pct_bed_days`, `baseline_2011`, `index_2011`, `bed_days_per_case`<br>`population`, `rate_per_100k` |
+| `national_by_year_road_user_group.csv` | C3,stats | 55/year×group(5) | `road_user_group`, `hospitalisations`, `bed_days`, `calendar_year`<br>`annual_total`, `road_user_group_share_pct`, `road_user_group_baseline_2011`, `index_2011` |
+| `national_by_year_age.csv` | C4(Everyone),stats | 78/year×age(7)+1 Unknown | `calendar_year`, `age_group`, `age_order`, `hospitalisations`<br>`bed_days`, `annual_total`, `age_share_pct` |
+| `national_by_age_road_user_group_year.csv` | C4(named) | 386/year×age×group+1 Unknown | `calendar_year`, `age_group`, `road_user_group`, `hospitalisations`<br>`bed_days`, `road_user_year_total`, `share_within_road_user_group_pct` |
+| `national_monthly_2020_baseline.csv` | C5,stats | 72/group(6 incl All)×month | `month_name`, `month_num`, `road_user_group`, `baseline_mean`<br>`baseline_min`, `baseline_max`, `value_2019`, `value_2020`<br>`change_2020_vs_2019_pct` |
+| `national_by_road_user_counterparty_year.csv` | C6,C7,stats | 308/year×group×counterparty (zeros absent) | `calendar_year`, `road_user_group`, `counterparty_group`, `hospitalisations`<br>`bed_days`, `road_user_year_total`, `share_within_road_user_group_pct` |
+| `national_car_occupants_counterparty_remoteness.csv` | C8,stats | 264/year×remoteness(4)×counterparty(6) | `calendar_year`, `remoteness`, `counterparty_group`, `hospitalisations`<br>`bed_days`, `remoteness_total`, `share_within_remoteness_pct` |
+| `state_by_year_rates.csv` | C9,C10,stats | 88/state(8)×year(11) | `state_code`, `state_name`, `calendar_year`, `cases` (→ `hospitalisations`), `bed_days`, `population`, `series_break_flag`, `is_break_year`, `series_break_note`, `rate_per_100k` |
+| `external_deaths_2021.csv` | stats | 4 | `year`, `road_user_group`, `deaths`, `source`<br>`note` |
 
 ### 5.3 Files for table views, downloads, about-data (full headers)
 
 | File | Columns | Use |
 |---|---|---|
-| national_by_road_user_counterparty_year_detail.csv | calendar_year,road_user,counterparty,hospitalisations,bed_days,road_user_year_total,share_within_road_user_pct | C6/C7 table+download (original 12×10) |
-| national_monthly_road_user.csv | calendar_year,month,road_user,month_num,year_month,hospitalisations,bed_days,monthly_total,monthly_road_user_share_pct | C5 table (year_month int e.g. 201101) |
-| national_by_year_remoteness.csv | calendar_year,**ABS_remoteness_area**,hospitalisations,bed_days,annual_total,remoteness_share_pct | downloads/about `[CONFIRM label values; Missing→Other or unknown?]` |
-| national_by_road_user_sex.csv | sex,road_user,hospitalisations,bed_days,road_user_total,sex_share_within_road_user_pct | downloads/about; **no year column** `[CONFIRM grain: pooled 2011–2021 or single year?]` |
-| national_age_65_plus.csv | calendar_year,hospitalisations_65_plus,bed_days_65_plus | downloads/about |
-| road_user_groups.csv | road_user,road_user_group,2021_hospitalisations | glossary (bracket notation for digit-leading column) |
-| counterparty_groups.csv | counterparty,counterparty_group,2021_hospitalisations | glossary |
+| `national_by_road_user_counterparty_year_detail.csv` | `calendar_year`, `road_user`, `counterparty`, `hospitalisations`<br>`bed_days`, `road_user_year_total`, `share_within_road_user_pct` | C6/C7 table+download (original 12×10) |
+| `national_monthly_road_user.csv` | `calendar_year`, `month`, `road_user`, `month_num`<br>`year_month`, `hospitalisations`, `bed_days`, `monthly_total`<br>`monthly_road_user_share_pct` | C5 table (year_month int e.g. 201101) |
+| `national_by_year_remoteness.csv` | `calendar_year`, `ABS_remoteness_area`, `hospitalisations`, `bed_days`<br>`annual_total`, `remoteness_share_pct` | downloads/about `[CONFIRM label values; Missing→Other or unknown?]` |
+| `national_by_road_user_sex.csv` | `sex`, `road_user`, `hospitalisations`, `bed_days`<br>`road_user_total`, `sex_share_within_road_user_pct` | downloads/about; **no year column** `[CONFIRM grain: pooled 2011–2021 or single year?]` |
+| `national_age_65_plus.csv` | `calendar_year`, `hospitalisations_65_plus`, `bed_days_65_plus` | downloads/about |
+| `road_user_groups.csv` | `road_user`, `road_user_group`, `2021_hospitalisations` | glossary (bracket notation for digit-leading column) |
+| `counterparty_groups.csv` | `counterparty`, `counterparty_group`, `2021_hospitalisations` | glossary |
 
 **Not shipped:** `superseded_*.csv` (×3), `national_population.csv` (Australia,calendar_year),
 `state_population.csv` (state,population,calendar_year). Keep in KNIME/raw.
@@ -568,7 +568,7 @@ OUTPUT: complete files; then assumptions, open questions, decisions to log
 ```
 
 ## Appendix B. Page title and heading reference
-| Page | <title> | <h1> |
+| Page | `<title>` | `<h1>` |
 |---|---|---|
 | index.html | Road crash injuries in Australia: the hidden toll | For every person killed on Australian roads in {latest_year}, about {hosp_per_death_2021} were hospitalised |
 | chapter-1.html | 1. The hidden toll: road crash injuries in Australia | The hidden toll |
